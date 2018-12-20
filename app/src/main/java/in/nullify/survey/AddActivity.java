@@ -47,7 +47,7 @@ public class AddActivity extends AppCompatActivity {
     public ArrayList<Appl> applience = new ArrayList<>();
     public ArrayList<Crop> crops = new ArrayList<>();
     public ArrayList<Prob> probs = new ArrayList<>();
-
+    private boolean a=false,b=false,c=false,d=false,e=false,f=false,g=false;
     public ArrayList<String> schemeslist = new ArrayList<>();
     public ArrayList<String> skeyss = new ArrayList<>();
     private AppCompatEditText rname, rage, rrelatn, rnumber, ridt, ridn,
@@ -735,6 +735,7 @@ public class AddActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         if (Integer.parseInt(response) > 0) {
+                            a=true;
                             InsertRes(response);
                             InsertAgri(response);
                             InsertApp2(response);
@@ -742,6 +743,8 @@ public class AddActivity extends AppCompatActivity {
                             InsertLive(response);
                             InsertFamily(response);
                             scheme(response);
+                        }else{
+                            a=false;
                         }
                     }
                 },
@@ -809,8 +812,9 @@ public class AddActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(String response) {
                             if (Boolean.valueOf(response)) {
+                                b=true;
                             } else {
-
+                                b=false;
                             }
                         }
                     },
@@ -863,8 +867,9 @@ public class AddActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         if (Boolean.valueOf(response)) {
+                            c=true;
                         } else {
-
+                            c=false;
                         }
                     }
                 },
@@ -911,8 +916,9 @@ public class AddActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(String response) {
                             if (Boolean.valueOf(response)) {
+                                d=true;
                             } else {
-
+                                d=false;
                             }
                         }
                     },
@@ -958,8 +964,9 @@ public class AddActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(String response) {
                             if (Boolean.valueOf(response)) {
+                                e=true;
                             } else {
-
+                                e=false;
                             }
                         }
                     },
@@ -1007,8 +1014,9 @@ public class AddActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(String response) {
                             if (Boolean.valueOf(response)) {
+                                f=true;
                             } else {
-
+                                f=false;
                             }
                         }
                     },
@@ -1052,8 +1060,9 @@ public class AddActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(String response) {
                             if (Boolean.valueOf(response)) {
+                                g=true;
                             } else {
-
+                                g=false;
                             }
                         }
                     },
